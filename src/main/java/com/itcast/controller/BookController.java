@@ -62,7 +62,7 @@ public class BookController {
     // 删除书籍
     @RequestMapping("/delBook/{bookID}")
     public String delBook(@PathVariable("bookID") int id){
-        System.out.println();
+        System.out.println(id);
         bookService.deleteBookById(id);
         return "redirect:/book/allBook";
     }
